@@ -24,7 +24,7 @@ Then /I should see all the movies/ do
   end
 end
 
-Then /^the director of "(.*?)" should be "(.*?)"$/ do |movie_title, new_director|
-  movie = Movie.find_by_title movie_title
-  movie.director.should == new_director
+Then /^the director of "(.*)" should be "(.*)"$/ do |title, name|
+  movie = Movie.find_by_title title
+  movie.director.should == name
 end
